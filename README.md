@@ -2,9 +2,9 @@
 
 **Introduction to AI Safety (Stat 198) - Final Project**
 
-- **Author:** Michael Slain
-- **Date:** December 10, 2025
-- **Target Model:** DistilBERT-SST2 (Sentiment Analysis)
+**Author:** Michael Slain
+**Date:** December 10, 2025
+**Target Model:** DistilBERT-SST2 (Sentiment Analysis)
 
 ---
 
@@ -172,38 +172,38 @@ We initially attempted to use TextAttack library but encountered bus errors on M
 
 **Example 1 - Positive to Negative**
 
-**Original Text:** "This restaurant serves the most delicious food I've ever tasted."
-**Original Prediction:** POSITIVE (confidence: 0.9999)
-**Adversarial Text:** "This restaurant serves the most disgusting food I've ever tasted."
-**Adversarial Prediction:** NEGATIVE (confidence: 0.9502)
-**Changes:** Replaced "delicious" with "disgusting"
+**Original Text:** "This restaurant serves the most delicious food I've ever tasted."  
+**Original Prediction:** POSITIVE (confidence: 0.9999)  
+**Adversarial Text:** "This restaurant serves the most disgusting food I've ever tasted."  
+**Adversarial Prediction:** NEGATIVE (confidence: 0.9502)  
+**Changes:** Replaced "delicious" with "disgusting"  
 **Human Evaluation:** The adversarial text completely flips the sentiment and meaning for humans too. This is a semantic change, not a true adversarial example.
 
 **Example 2 - Positive to Negative**
 
-**Original Text:** "I'm so happy with this purchase, it exceeded all my expectations!"
-**Original Prediction:** POSITIVE (confidence: 0.9999)
-**Adversarial Text:** "I'm so disappointed with this purchase, it exceeded all my expectations!"
-**Adversarial Prediction:** NEGATIVE (confidence: 0.9831)
-**Changes:** Replaced "happy" with "disappointed"
+**Original Text:** "I'm so happy with this purchase, it exceeded all my expectations!"  
+**Original Prediction:** POSITIVE (confidence: 0.9999)  
+**Adversarial Text:** "I'm so disappointed with this purchase, it exceeded all my expectations!"  
+**Adversarial Prediction:** NEGATIVE (confidence: 0.9831)  
+**Changes:** Replaced "happy" with "disappointed"  
 **Human Evaluation:** The sentiment changes for humans. The phrase "exceeded all my expectations" creates interesting ambiguity with "disappointed."
 
 **Example 3 - Negative to Positive**
 
-**Original Text:** "This movie was terrible and a complete waste of time."
-**Original Prediction:** NEGATIVE (confidence: 0.9998)
-**Adversarial Text:** "This movie was terrible and a complete pleasure of time."
-**Adversarial Prediction:** POSITIVE (confidence: 0.9993)
-**Changes:** Replaced "waste" with "pleasure"
+**Original Text:** "This movie was terrible and a complete waste of time."  
+**Original Prediction:** NEGATIVE (confidence: 0.9998)  
+**Adversarial Text:** "This movie was terrible and a complete pleasure of time."  
+**Adversarial Prediction:** POSITIVE (confidence: 0.9993)  
+**Changes:** Replaced "waste" with "pleasure"  
 **Human Evaluation:** Creates a contradictory statement ("terrible" versus "pleasure"). A human would find this confusing rather than clearly positive.
 
 **Example 4 - Negative to Positive**
 
-**Original Text:** "I absolutely hate this product, it broke after one day."
-**Original Prediction:** NEGATIVE (confidence: 0.9998)
-**Adversarial Text:** "I absolutely love this product, it broke after one day."
-**Adversarial Prediction:** POSITIVE (confidence: 0.9996)
-**Changes:** Replaced "hate" with "love"
+**Original Text:** "I absolutely hate this product, it broke after one day."  
+**Original Prediction:** NEGATIVE (confidence: 0.9998)  
+**Adversarial Text:** "I absolutely love this product, it broke after one day."  
+**Adversarial Prediction:** POSITIVE (confidence: 0.9996)  
+**Changes:** Replaced "hate" with "love"  
 **Human Evaluation:** Highly contradictory. The model focuses on "love" and ignores "it broke after one day." A human would clearly interpret this as sarcasm or negative sentiment.
 
 ### Character-Level Attack Results
@@ -220,10 +220,10 @@ Character-level perturbations were ineffective against the DistilBERT model. The
 
 **Example 1 - Character-Level Attack Failed**
 
-**Original Text:** "The movie was absolutely wonderful and I loved every minute of it!"
-**Original Prediction:** POSITIVE (confidence: 0.9999)
-**Attempted Perturbations:** Character swaps in "wonderful", "loved", "minute"
-**Result:** All perturbations still predicted as POSITIVE
+**Original Text:** "The movie was absolutely wonderful and I loved every minute of it!"  
+**Original Prediction:** POSITIVE (confidence: 0.9999)  
+**Attempted Perturbations:** Character swaps in "wonderful", "loved", "minute"  
+**Result:** All perturbations still predicted as POSITIVE  
 **Analysis:** DistilBERT's subword tokenization makes it resilient to character-level noise
 
 ### Comparison of Attack Methods
@@ -429,12 +429,12 @@ python adversarial_attack.py
 ```
 
 The script will:
-1. LoadLoad the DistilBERT-SST2 sentiment analysis model (downloads on first run, ~250MB)
-2. RunRun word substitution attacks on positivepositive sentimentsentiment examples
+1. Load the DistilBERT-SST2 sentiment analysis model (downloads on first run, ~250MB)
+2. Run word substitution attacks on positive sentiment examples
 3. Run word substitution attacks on negative sentiment examples
-4. Run character-level attacks on selectselect examples
-5. DisplayDisplay detailed results for each attack
-6. SaveSave results to `attack_results.json`
+4. Run character-level attacks on select examples
+5. Display detailed results for each attack
+6. Save results to `attack_results.json`
 
 ### Output Files
 
@@ -471,17 +471,17 @@ attacker.run_textfooler_attack(text, label, max_candidates=100)
 
 ### Troubleshooting
 
-- **Issue:** Model download fails
-- **Solution:** Check internet connection. Models download from HuggingFace Hub.
+**Issue:** Model download fails
+**Solution:** Check internet connection. Models download from HuggingFace Hub.
 
-- **Issue:** Out of memory errors
-- **Solution:** Reduce batch size or use CPU instead of GPU.
+**Issue:** Out of memory errors
+**Solution:** Reduce batch size or use CPU instead of GPU.
 
-- **Issue:** Attacks taking too long
-- **Solution:** Reduce `max_candidates` parameter or test fewer examples.
+**Issue:** Attacks taking too long
+**Solution:** Reduce `max_candidates` parameter or test fewer examples.
 
-- **Issue:** Import errors
-- **Solution:** Make sure all packages are installed: `pip install -r requirements.txt`
+**Issue:** Import errors
+**Solution:** Make sure all packages are installed: `pip install -r requirements.txt`
 
 ---
 
