@@ -1,0 +1,4 @@
+# core dependencies for custom adversarial attacks
+transformers==4.42.4
+torch>=2.0.0
+pandas>=2.0.0

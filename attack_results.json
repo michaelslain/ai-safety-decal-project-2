@@ -1,0 +1,186 @@
+[
+  {
+    "attack_type": "word_substitution",
+    "success": false,
+    "original_text": "The movie was absolutely wonderful and I loved every minute of it!",
+    "adversarial_text": "The movie was absolutely wonderful and I loved every minute of it!",
+    "original_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.999887228012085,
+      "probabilities": [
+        0.00011278350575594231,
+        0.999887228012085
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.999887228012085,
+      "probabilities": [
+        0.00011278350575594231,
+        0.999887228012085
+      ]
+    },
+    "modification": "none"
+  },
+  {
+    "attack_type": "word_substitution",
+    "success": true,
+    "original_text": "This restaurant serves the most delicious food I've ever tasted.",
+    "adversarial_text": "This restaurant serves the most disgusting food I've ever tasted.",
+    "original_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9998677968978882,
+      "probabilities": [
+        0.00013214915816206485,
+        0.9998677968978882
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.950206995010376,
+      "probabilities": [
+        0.950206995010376,
+        0.04979293420910835
+      ]
+    },
+    "modification": "delicious"
+  },
+  {
+    "attack_type": "word_substitution",
+    "success": true,
+    "original_text": "I'm so happy with this purchase, it exceeded all my expectations!",
+    "adversarial_text": "I'm so disappointed with this purchase, it exceeded all my expectations!",
+    "original_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9998667240142822,
+      "probabilities": [
+        0.00013326284533832222,
+        0.9998667240142822
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.9830871820449829,
+      "probabilities": [
+        0.9830871820449829,
+        0.016912812367081642
+      ]
+    },
+    "modification": "happy"
+  },
+  {
+    "attack_type": "word_substitution",
+    "success": true,
+    "original_text": "This movie was terrible and a complete waste of time.",
+    "adversarial_text": "This movie was terrible and a complete pleasure of time.",
+    "original_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.9997979998588562,
+      "probabilities": [
+        0.9997979998588562,
+        0.00020198803395032883
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9993139505386353,
+      "probabilities": [
+        0.000686095270793885,
+        0.9993139505386353
+      ]
+    },
+    "modification": "waste"
+  },
+  {
+    "attack_type": "word_substitution",
+    "success": false,
+    "original_text": "The service was awful and the food was cold.",
+    "adversarial_text": "The service was awful and the food was cold.",
+    "original_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.9997404217720032,
+      "probabilities": [
+        0.9997404217720032,
+        0.0002596298872958869
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.9997404217720032,
+      "probabilities": [
+        0.9997404217720032,
+        0.0002596298872958869
+      ]
+    },
+    "modification": "none"
+  },
+  {
+    "attack_type": "word_substitution",
+    "success": true,
+    "original_text": "I absolutely hate this product, it broke after one day.",
+    "adversarial_text": "I absolutely love this product, it broke after one day.",
+    "original_prediction": {
+      "label": "NEGATIVE",
+      "confidence": 0.9997735619544983,
+      "probabilities": [
+        0.9997735619544983,
+        0.00022643804550170898
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9996086955070496,
+      "probabilities": [
+        0.0003913810651283711,
+        0.9996086955070496
+      ]
+    },
+    "modification": "hate"
+  },
+  {
+    "attack_type": "character_level",
+    "success": false,
+    "original_text": "The movie was absolutely wonderful and I loved every minute of it!",
+    "adversarial_text": "The movie was absolutely wonderful and I loved every minute of it!",
+    "original_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.999887228012085,
+      "probabilities": [
+        0.00011278350575594231,
+        0.999887228012085
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.999887228012085,
+      "probabilities": [
+        0.00011278350575594231,
+        0.999887228012085
+      ]
+    },
+    "modification": "none"
+  },
+  {
+    "attack_type": "character_level",
+    "success": false,
+    "original_text": "This restaurant serves the most delicious food I've ever tasted.",
+    "adversarial_text": "This restaurant serves the most delicious food I've ever tasted.",
+    "original_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9998677968978882,
+      "probabilities": [
+        0.00013214915816206485,
+        0.9998677968978882
+      ]
+    },
+    "adversarial_prediction": {
+      "label": "POSITIVE",
+      "confidence": 0.9998677968978882,
+      "probabilities": [
+        0.00013214915816206485,
+        0.9998677968978882
+      ]
+    },
+    "modification": "none"
+  }
+]
