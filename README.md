@@ -2,9 +2,11 @@
 
 **Introduction to AI Safety (Stat 198) - Final Project**
 
-**Author:** Michael Slain
-**Date:** December 10, 2025
-**Target Model:** DistilBERT-SST2 (Sentiment Analysis)
+Author: Michael Slain
+
+Date: December 10, 2025
+
+Target Model: DistilBERT-SST2 (Sentiment Analysis)
 
 ---
 
@@ -471,17 +473,21 @@ attacker.run_textfooler_attack(text, label, max_candidates=100)
 
 ### Troubleshooting
 
-**Issue:** Model download fails
-**Solution:** Check internet connection. Models download from HuggingFace Hub.
+#### Model download fails
 
-**Issue:** Out of memory errors
-**Solution:** Reduce batch size or use CPU instead of GPU.
+Check internet connection. Models download from HuggingFace Hub.
 
-**Issue:** Attacks taking too long
-**Solution:** Reduce `max_candidates` parameter or test fewer examples.
+#### Out of memory errors
 
-**Issue:** Import errors
-**Solution:** Make sure all packages are installed: `pip install -r requirements.txt`
+Reduce batch size or use CPU instead of GPU.
+
+#### Attacks taking too long
+
+Reduce `max_candidates` parameter or test fewer examples.
+
+#### Import errors
+
+Make sure all packages are installed: `pip install -r requirements.txt`
 
 ---
 
